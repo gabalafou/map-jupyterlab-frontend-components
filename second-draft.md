@@ -237,7 +237,7 @@ The Jupyter logo appears in the top area.
 The menu area contains the main menu bar (File, Edit, View, etc).
 
 ![Screenshot on which the top menu bar container is
-outlined](annotated-ui-screenshots/main-menu-bar-container.png)
+outlined](annotated-ui-screenshots/top-menu-bar-container.png)
 
 #### Node-to-node CSS selector path for this node:
 
