@@ -520,7 +520,7 @@ within the file menu, the word "New Launcher" is a menu item. Clicking a menu
 item either opens a sub-menu or executes a command.
 
 ![Screenshot on which "File" menu item of the main menu bar is
-outlined](annotated-ui-screenshots/main-menu-bar-item-file.png)
+outlined](annotated-ui-screenshots/file-menu-item.png)
 
 #### Node-to-node CSS selector path for this node:
 
@@ -586,7 +586,7 @@ clicked. By default these include: file browser, running terminal and kernels,
 table of contents, and extension manager.
 
 ![Screenshot on which the file browser tab in the left sidebar is
-outlined](annotated-ui-screenshots/left-sidebar-tab-file-browser.png)
+outlined](annotated-ui-screenshots/file-browser-tab.png)
 
 #### Node-to-node CSS selector path for this node:
 
@@ -840,7 +840,7 @@ A tab bar in the main area allows you switch between open documents within a
 particular split of the main dock panel.
 
 ![Screenshot on which open documents tab bar of the main dock area is
-outlined](annotated-ui-screenshots/dock-panel-tab-bar.png)
+outlined](annotated-ui-screenshots/tab-bar-of-open-documents.png)
 
 #### Node-to-node CSS selector path for this node:
 
@@ -1024,7 +1024,7 @@ outlined](annotated-ui-screenshots/notebook-content.png)
 ### Notebook toolbar item: save button
 
 ![Screenshot on which the notebook toolbar item save button is
-outlined](annotated-ui-screenshots/notebook-tool-bar-item-save.png)
+outlined](annotated-ui-screenshots/notebook-toolbar-item.png)
 
 #### Node-to-node CSS selector path for this node:
 
