@@ -2,9 +2,7 @@
 
 Author: Gabriel Fouasnon
 
-Created December 28, 2021
-
-Updated January 18, 2021
+Date: January 18, 2022
 
 ## Introduction
 
