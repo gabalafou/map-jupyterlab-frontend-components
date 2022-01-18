@@ -2,12 +2,18 @@
 
 Author: Gabriel Fouasnon
 
-Date created: December 28, 2021
+Created December 28, 2021
+
+Updated January 18, 2021
 
 ## Introduction
 
 The purpose of this document is to help orient frontend developers to the
 JupyterLab codebase.
+
+Required reading for this document is the sequence of pages in the JupyterLab docs
+beginning with [General Codebase
+Orientation](https://jupyterlab.readthedocs.io/en/latest/developer/repo.html).
 
 
 ### Source code versions
@@ -36,6 +42,53 @@ This document is organized by actual DOM nodes in the browser that JupyterLab
 creates. Each section below covers a single node. In general, as you go from
 beginning to end, the nodes become more and more deeply nested.
 
+### Lumino and JupyterLab
+
+JupyterLab is built on top of Lumino. In other words, Lumino is a dependency of
+JupyterLab but JupyterLab is not a dependency of Lumino. Lumino provides a set
+of classes for creating common UI elements, such as tab bars, menus, panels, and
+more. Lumino also provides an architecture for plugins.
+
+Every UI element in JupyterLab ultimately inherits from the Lumino Widget class.
+A widget in Lumino is essentially what is sometimes called a frontend component
+in other libraries. It's a class that wraps a DOM node, providing a piece of the
+UI.
+
+### Point of entry
+
+It's hard to say where exactly the point of entry is for an application as big
+and complex as JupyterLab, but for our purposes, it's `new JupyterLab().start()`
+in [lines 177-191 of
+jupyterlab/staging/index.js](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/jupyterlab/staging/index.js#L177).
+
+The [JupyterLab
+class](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/lab.ts#L17)
+inherits from [JupyterFrontEnd
+class](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/frontend.ts#L40),
+which in turn inherits from [Lumino
+Application](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/application/src/index.ts#L112).
+
+The JupyterLab class constructor [creates a LabShell
+instance](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/lab.ts#L24)
+if one is not passed in. [LabShell is defined in
+packages/application/src/shell.ts](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L255),
+which is a key file to understanding how the JupyterLab UI is laid out. The base
+Lumino Application class [points `this.shell` to the LabShell
+instance](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/application/src/index.ts#L129),
+so `lab.shell` is the root Lumino widget in the hierarchy of Lumino widgets.
+Within the JupyterLab source code, you will often see it referred to as
+`app.shell`.
+
+The [start method is defined in the Application
+class](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/application/src/index.ts#L383).
+For each plugin that has been registered, it [calls activate on that
+plugin](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/application/src/index.ts#L267),
+passing in the plugin's declared requirements to the activate function. In
+JupyterLab, plugins are defined in packages that have -extension at the end of
+the name. For example, mainmenu-extension [defines a plugin that adds the main
+menu
+bar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/mainmenu-extension/src/index.ts#L133)
+to the JupyterLab interface.
 
 ## DOM Nodes
 
