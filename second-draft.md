@@ -283,7 +283,7 @@ outlined](annotated-ui-screenshots/left-sidebar.png)
 | ---- | ----- |
 | HTML tag  | div   |
 | HTML id   | none |
-| CSS classes | [jp-mod-left](https://github.com/jupyterlab/jupyterlab/blob/v4.0.4a18/packages/application/src/shell.ts#L312) |
+| CSS classes | [jp-mod-left](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L312) |
 | HTML role | [complementary](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L321) |
 | aria-label | [main sidebar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L313) |
 | Controlling class | [Lumino TabBar](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/tabbar.ts#L43) |
@@ -298,7 +298,7 @@ outlined](annotated-ui-screenshots/left-sidebar.png)
 2. [Add the tab bar to the middle
    container](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L368)
 
-This node gets attached to the DOM with the middle container (see #### Steps to mount
+This node gets attached to the DOM with the middle container (see steps to mount
 the middle container, above).
 
 
@@ -333,7 +333,7 @@ outtlined](annotated-ui-screenshots/main-vsplit-panel.png)
 2. [Add the v. split panel to the middle
    container](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L369)
 
-This node gets attached to the DOM with the middle container (see #### Steps to mount
+This node gets attached to the DOM with the middle container (see steps to mount
 the middle container, above).
 
 
@@ -368,7 +368,7 @@ outlined](annotated-ui-screenshots/right-sidebar.png)
 2. [Add the right sidebar to the middle
    container](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L370)
 
-This node gets attached to the DOM with the middle container (see #### Steps to mount
+This node gets attached to the DOM with the middle container (see steps to mount
 the middle container, above).
 
 
@@ -427,7 +427,7 @@ outlined](annotated-ui-screenshots/main-menu-bar.png)
 
 #### Steps to mount:
 
-(Note: this set of steps is nearly identical to the set of #### Steps to mount the
+(Note: this set of steps is nearly identical to the set of steps to mount the
 Jupyter logo.)
 
 1. [Create new menu
@@ -463,7 +463,7 @@ outlined](annotated-ui-screenshots/main-split-panel.png)
 | Name | Value |
 | ---- | ----- |
 | HTML tag  | div   |
-| HTML id   | [jp-main-split-panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L1294) |
+| HTML id   | [jp-main-split-panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L308) |
 | Controlling class | [RestorableSplitPanel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L2061) extends [Lumino SplitPanel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/splitpanel.ts#L30) |
 
 
@@ -541,7 +541,7 @@ outlined](annotated-ui-screenshots/file-menu-item.png)
 
 #### Steps to mount:
 
-To make this concrete, we will follow the #### Steps to mount the "File" menu item.
+To make this concrete, we will follow the steps to mount the "File" menu item.
 
 1. [Provide the "File" menu item
    label](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/mainmenu-extension/schema/plugin.json#L8)
@@ -610,7 +610,7 @@ outlined](annotated-ui-screenshots/file-browser-tab.png)
 
 #### Steps to mount:
 
-Note that the #### Steps to mount a tab in left sidebar are similar to the steps to
+Note that the steps to mount a tab in left sidebar are similar to the steps to
 mount a menu item in the main menu bar. We will use the file browser as a
 concrete example.
 
@@ -661,6 +661,7 @@ outlined](annotated-ui-screenshots/left-tab-panel-container.png)
 | HTML tag  | div   |
 | HTML id   | [jp-left-stack](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L322) |
 | Controlling class | [Lumino StackedPanel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/stackedpanel.ts#L24) |
+| Shell area | [left](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L762) |
 
 
 #### Steps to mount:
@@ -671,7 +672,7 @@ outlined](annotated-ui-screenshots/left-tab-panel-container.png)
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L361)
 
 This node gets attached to the DOM with the main horizontally split panel (see
-#### Steps to mount the horizontally split container, above).
+steps to mount the horizontally split container, above).
 
 
 ### Main document area
@@ -700,6 +701,7 @@ outlined](annotated-ui-screenshots/main-document-area.png)
 | HTML id   | [jp-main-dock-panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L307) |
 | HTML role | [main](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L337) |
 | Controlling class | [DockPanelSvg](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/ui-components/src/icon/widgets/tabbarsvg.ts#L63) extends [Lumino DockPanel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/dockpanel.ts#L35) |
+| Shell area | [main](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L764) |
 
 
 #### Steps to mount:
@@ -710,7 +712,7 @@ outlined](annotated-ui-screenshots/main-document-area.png)
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L362)
 
 This node gets attached to the DOM with the main horizontally split panel (see
-#### Steps to mount the horizontally split container, above).
+steps to mount the horizontally split container, above).
 
 
 ### Right tab panel container
@@ -824,7 +826,7 @@ outlined](annotated-ui-screenshots/file-browser-panel.png)
    which in turn delegates to PanelLayout.
 
 The file browser panel is now in the tree of the left tab panel container, so it
-will be attached to the DOM when its parent is (see #### Steps to mount the left tab
+will be attached to the DOM when its parent is (see steps to mount the left tab
 panel container, above).
 
 After the file browser widget is mounted, it gets shown and hidden via a Lumino
@@ -875,7 +877,7 @@ so that when the tab changes, it can change the corresponding tab panel.
 ### Notebook Panel
 
 
-A is rendered into the main area. It contains a toolbar and the notebook body.
+A notebook panel is rendered into the main area. It contains a toolbar and the notebook body.
 
 ![Screenshot on which the notebook panel in the main area is
 outlined](annotated-ui-screenshots/notebook-panel.png)
@@ -896,20 +898,8 @@ outlined](annotated-ui-screenshots/notebook-panel.png)
 | HTML id   | [a uuid](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/apputils/src/mainareawidget.ts#L36) |
 | CSS class | [jp-NotebookPanel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/notebook/src/panel.ts#L55) |
 | HTML role | [tabpanel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/docklayout.ts#L2078) |
-| aria-labeledby | [tab-key-0](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/docklayout.ts#L2086) (for example) |
+| aria-labelledby | [tab-key-0](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/docklayout.ts#L2086) (for example) |
 | Controlling class | [NotebookPanel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/notebook/src/panel.ts#L45) extends [DocumentWidget](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/docregistry/src/default.ts#L490) extends [MainAreaWidget](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/apputils/src/mainareawidget.ts#L20) extends [Lumino Widget](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/widget.ts#L38) |
-
-The tab bar is created main Lumino DockPanel instance via [the private
-_createTabBar
-method](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/dockpanel.ts#L922).
-The Lumino DockLayout [handles mounting the tab
-bar](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/docklayout.ts#L1105)
-to the DOM.
-
-Like the shell's left sidebar handler, it [connects a currentChanged handler to
-the tab
-bar](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/dockpanel.ts#L944),
-so that when the tab changes, it can change the corresponding tab panel.
 
 
 #### Steps to mount:
