@@ -53,11 +53,11 @@ other areas not covered by this document).
 ![Screenshot of the JupyterLab UI in which the entire UI is outlined because the
 shell node spans the entire visible UI](annotated-ui-screenshots/shell.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     html > body > div#main
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -66,7 +66,7 @@ shell node spans the entire visible UI](annotated-ui-screenshots/shell.png)
 | CSS class | [jp-LabShell](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L261) |
 | Controlling class | [LabShell](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L255) extends [Widget](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/widget.ts#L38) |
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create new app
    shell](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/lab.ts#L24)
@@ -89,11 +89,11 @@ etc).
 ![Screenshot on which the top container of the JupyterLab UI is
 outlined](annotated-ui-screenshots/top.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-top-panel
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -104,7 +104,7 @@ outlined](annotated-ui-screenshots/top.png)
 | Shell area | [top](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L770) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create handler for top
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L282).
@@ -138,12 +138,12 @@ covered in this document: it also contains the Log Console when it's displayed.)
 ![Screenshot on which the middle container of the JupyterLab UI is
 outlined](annotated-ui-screenshots/middle.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel
 
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -152,7 +152,7 @@ outlined](annotated-ui-screenshots/middle.png)
 | Controlling class | [Lumino BoxPanel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/boxpanel.ts#L22) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create new box
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L286)
@@ -171,11 +171,11 @@ The bottom area contains the status bar.
 ![Screenshot on which the bottom container of the JupyterLab UI is
 outlined](annotated-ui-screenshots/bottom.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-bottom-panel
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -186,7 +186,7 @@ outlined](annotated-ui-screenshots/bottom.png)
 | Shell area | [bottom](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L756) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create new box
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L284)
@@ -204,11 +204,11 @@ The Jupyter logo appears in the top area.
 
 ![Screenshot on which the logo is outlined](annotated-ui-screenshots/logo.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-top-panel > div#jp-MainLogo
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -217,7 +217,7 @@ The Jupyter logo appears in the top area.
 | Controlling class | [Lumino Widget](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/widget.ts#L38) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Ask shell to add logo to top
    area](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application-extension/src/index.tsx#L1045)
@@ -239,11 +239,11 @@ The menu area contains the main menu bar (File, Edit, View, etc).
 ![Screenshot on which the top menu bar container is
 outlined](annotated-ui-screenshots/top-menu-bar-container.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-top-panel > div#jp-menu-panel
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -254,7 +254,7 @@ outlined](annotated-ui-screenshots/top-menu-bar-container.png)
 | Controlling class | [PanelHandler](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L1577), a private class that wraps [Lumino Panel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/panel.ts#L24) |
 | Shell area | [menu](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L766) |
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create new handler for menu
    area](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L279)
@@ -272,12 +272,12 @@ mounting top container, above).
 ![Screenshot on which the left sidebar is
 outlined](annotated-ui-screenshots/left-sidebar.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div[aria-label="main sidebar"]
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -289,7 +289,7 @@ outlined](annotated-ui-screenshots/left-sidebar.png)
 | Controlling class | [Lumino TabBar](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/tabbar.ts#L43) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create handler for left side
    bar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L297).
@@ -313,11 +313,11 @@ does not go into.
 ![Screenshot on which the main vertical split panel is
 outtlined](annotated-ui-screenshots/main-vsplit-panel.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel > div#jp-main-vsplit-panel
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -326,7 +326,7 @@ outtlined](annotated-ui-screenshots/main-vsplit-panel.png)
 | Controlling class | [RestorableSplitPanel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L2061) extends [Lumino SplitPanel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/splitpanel.ts#L30) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create vertically split
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L287).
@@ -342,12 +342,12 @@ the middle container, above).
 ![Screenshot on which the right sidebar is
 outlined](annotated-ui-screenshots/right-sidebar.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div[aria-label="alternate sidebar"]
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -359,7 +359,7 @@ outlined](annotated-ui-screenshots/right-sidebar.png)
 | Controlling class | [Lumino TabBar](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/tabbar.ts#L43) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create handler for right
    sidebar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L298).
@@ -377,11 +377,11 @@ the middle container, above).
 ![Screenshot on which the status bar is
 outlined](annotated-ui-screenshots/status-bar.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-bottom-panel > div#jp-main-statusbar
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -390,7 +390,7 @@ outlined](annotated-ui-screenshots/status-bar.png)
 | Controlling class | [StatusBar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/statusbar/src/statusbar.ts#L24) extends Lumino Widget |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create new status
    bar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/statusbar-extension/src/index.ts#L63)
@@ -412,11 +412,11 @@ View, etc.
 ![Screenshot on which the main menu bar is
 outlined](annotated-ui-screenshots/main-menu-bar.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-top-panel > div#jp-menu-panel > div#jp-MainMenu
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -425,7 +425,7 @@ outlined](annotated-ui-screenshots/main-menu-bar.png)
 | Controlling class | [MainMenu](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/mainmenu/src/mainmenu.ts#L22) extends [Lumino MenuBar](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/menubar.ts#L35) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 (Note: this set of steps is nearly identical to the set of steps to mount the
 Jupyter logo.)
@@ -453,12 +453,12 @@ and the right area panel.
 ![Screenshot on which the main split panel is
 outlined](annotated-ui-screenshots/main-split-panel.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel > div#jp-main-split-panel
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -467,7 +467,7 @@ outlined](annotated-ui-screenshots/main-split-panel.png)
 | Controlling class | [RestorableSplitPanel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L2061) extends [Lumino SplitPanel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/splitpanel.ts#L30) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create split
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L293).
@@ -487,12 +487,12 @@ left section.
 ![Screenshot on which the status bar left panel is
 outlined](annotated-ui-screenshots/status-bar-left-panel.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-bottom-panel > div#jp-main-statusbar >
     div:first-child
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -501,7 +501,7 @@ outlined](annotated-ui-screenshots/status-bar-left-panel.png)
 | Controlling class | [Lumino Panel](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/panel.ts#L24) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create the status bar left
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/statusbar/src/statusbar.ts#L31).
@@ -522,12 +522,12 @@ item either opens a sub-menu or executes a command.
 ![Screenshot on which "File" menu item of the main menu bar is
 outlined](annotated-ui-screenshots/file-menu-item.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-top-panel > div#jp-menu-panel >
     div#jp-MainMenu > ul[role="menubar"] > li[role="menuitem"]
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -539,7 +539,7 @@ outlined](annotated-ui-screenshots/file-menu-item.png)
 | Controlling class | [VirtualElement](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/virtualdom/src/index.ts#L756) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 To make this concrete, we will follow the steps to mount the "File" menu item.
 
@@ -588,14 +588,14 @@ table of contents, and extension manager.
 ![Screenshot on which the file browser tab in the left sidebar is
 outlined](annotated-ui-screenshots/file-browser-tab.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div[aria-label="main sidebar"] >
     ul[aria-label="main sidebar"] >
     li[role="tab"]
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -608,7 +608,7 @@ outlined](annotated-ui-screenshots/file-browser-tab.png)
 | Controlling class | [VirtualElement](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/virtualdom/src/index.ts#L756) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 Note that the steps to mount a tab in left sidebar are similar to the steps to
 mount a menu item in the main menu bar. We will use the file browser as a
@@ -647,14 +647,14 @@ left sidebar.
 ![Screenshot on which the left tab panel container is
 outlined](annotated-ui-screenshots/left-tab-panel-container.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
     div#jp-main-split-panel >
     div#jp-left-stack
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -664,7 +664,7 @@ outlined](annotated-ui-screenshots/left-tab-panel-container.png)
 | Shell area | [left](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L762) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create stacked
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L1653).
@@ -686,14 +686,14 @@ each document has a tab that can be dragged from one split area into another.
 ![Screenshot on which the main document area is
 outlined](annotated-ui-screenshots/main-document-area.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
     div#jp-main-split-panel >
     div#jp-main-dock-panel
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -704,7 +704,7 @@ outlined](annotated-ui-screenshots/main-document-area.png)
 | Shell area | [main](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L764) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create main dock
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/application/src/shell.ts#L288).
@@ -724,7 +724,7 @@ HTML id is `jp-right-stack`.
 ![Screenshot on which the right tab panel container is
 outlined](annotated-ui-screenshots/right-tab-panel-container.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
@@ -737,7 +737,7 @@ outlined](annotated-ui-screenshots/right-tab-panel-container.png)
 
 See left sidebar tab. The idea is basically the same.
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div[aria-label="alternate sidebar"] >
@@ -754,13 +754,13 @@ bar.
 ![Screenshot on which the document mode switch in the status bar is
 outlined](annotated-ui-screenshots/document-mode-switch.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-bottom-panel > div#jp-main-statusbar >
     div:first-child >
     div#jp-single-document-mode
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -769,7 +769,7 @@ outlined](annotated-ui-screenshots/document-mode-switch.png)
 | Controlling class | [Switch](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/ui-components/src/components/switch.ts#L11) extends Lumino Widget |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create
    switch](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/statusbar-extension/src/index.ts#L349)
@@ -792,7 +792,7 @@ file system.
 ![Screenshot on which the file browser panel in the left panel area is
 outlined](annotated-ui-screenshots/file-browser-panel.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
@@ -800,7 +800,7 @@ outlined](annotated-ui-screenshots/file-browser-panel.png)
     div#jp-left-stack
     div#filebrowser
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -811,7 +811,7 @@ outlined](annotated-ui-screenshots/file-browser-panel.png)
 | aria-label | [File Browser Section](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/filebrowser-extension/src/index.ts#L392) |
 | Controlling class | [FileBrowser](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/filebrowser/src/browser.ts#L59) extends [Lumino Widget](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/widget.ts#L38) |
 
-#### Steps to mount:
+Steps to mount:
 
 1. [Create file browser
    widget](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/filebrowser-extension/src/index.ts#L301)
@@ -844,7 +844,7 @@ particular split of the main dock panel.
 ![Screenshot on which open documents tab bar of the main dock area is
 outlined](annotated-ui-screenshots/tab-bar-of-open-documents.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
@@ -852,7 +852,7 @@ outlined](annotated-ui-screenshots/tab-bar-of-open-documents.png)
     div#jp-main-dock-panel >
     div.lm-DockPanel-tabBar
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -882,7 +882,7 @@ A notebook panel is rendered into the main area. It contains a toolbar and the n
 ![Screenshot on which the notebook panel in the main area is
 outlined](annotated-ui-screenshots/notebook-panel.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
@@ -890,7 +890,7 @@ outlined](annotated-ui-screenshots/notebook-panel.png)
     div#jp-main-dock-panel >
     div.jp-NotebookPanel
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -902,7 +902,7 @@ outlined](annotated-ui-screenshots/notebook-panel.png)
 | Controlling class | [NotebookPanel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/notebook/src/panel.ts#L45) extends [DocumentWidget](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/docregistry/src/default.ts#L490) extends [MainAreaWidget](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/apputils/src/mainareawidget.ts#L20) extends [Lumino Widget](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/widget.ts#L38) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 There are multiple code paths to mount a notebook into the DOM. For example,
 using the open command from the file menu versus double clicking on a notebook
@@ -936,7 +936,7 @@ perform actions on the notebook, such as copy, paste, save, insert cell.
 ![Screenshot on which the notebook toolbar is
 outlined](annotated-ui-screenshots/notebook-toolbar.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
@@ -945,7 +945,7 @@ outlined](annotated-ui-screenshots/notebook-toolbar.png)
     div.jp-NotebookPanel >
     div.jp-NotebookPanel-toolbar
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -957,7 +957,7 @@ outlined](annotated-ui-screenshots/notebook-toolbar.png)
 | Controlling class | [ReactiveToolbar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/ui-components/src/components/toolbar.tsx#L357) extends [Toolbar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/ui-components/src/components/toolbar.tsx#L163) extends [Lumino Widget](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/widget.ts#L38) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. When the NotebookPanel widget is created (see above), it [creates its own
    toolbar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/apputils/src/mainareawidget.ts#L42).
@@ -976,7 +976,7 @@ editing.
 ![Screenshot on which the notebook content is
 outlined](annotated-ui-screenshots/notebook-content.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
@@ -985,7 +985,7 @@ outlined](annotated-ui-screenshots/notebook-content.png)
     div.jp-NotebookPanel >
     div.jp-NotebookPanel-notebook
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -998,7 +998,7 @@ outlined](annotated-ui-screenshots/notebook-content.png)
 | Controlling class | [Notebook](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/notebook/src/widget.ts#L1124) extends [StaticNotebook](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/notebook/src/widget.ts#L190) extends [Lumino Widget](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/widget.ts#L38) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. When the doc manager uses the notebook widget factory to create a new
    notebook panel, it [passes in a notebook
@@ -1016,7 +1016,7 @@ outlined](annotated-ui-screenshots/notebook-content.png)
 ![Screenshot on which the notebook toolbar item save button is
 outlined](annotated-ui-screenshots/notebook-toolbar-item.png)
 
-#### Node-to-node CSS selector path for this node:
+Node-to-node CSS selector path for this node:
 
     div#main > div#jp-main-content-panel >
     div#jp-main-vsplit-panel >
@@ -1026,7 +1026,7 @@ outlined](annotated-ui-screenshots/notebook-toolbar-item.png)
     div.jp-NotebookPanel-toolbar >
     div.jp-Toolbar-item
 
-#### Table of properties:
+Table of properties:
 
 | Name | Value |
 | ---- | ----- |
@@ -1036,7 +1036,7 @@ outlined](annotated-ui-screenshots/notebook-toolbar-item.png)
 | Controlling class | [ReactiveToolbar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/ui-components/src/components/toolbar.tsx#L357) extends [Toolbar](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/ui-components/src/components/toolbar.tsx#L163) extends [Lumino Widget](https://github.com/jupyterlab/lumino/blob/v2021.12.13/packages/widgets/src/widget.ts#L38) |
 
 
-#### Steps to mount:
+Steps to mount:
 
 1. The doc manager [uses a factory to create a new notebook
    panel](https://github.com/jupyterlab/jupyterlab/blob/v4.0.0a18/packages/docmanager/src/manager.ts#L590)
